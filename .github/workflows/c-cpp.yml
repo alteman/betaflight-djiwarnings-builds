@@ -1,8 +1,8 @@
 on:
-  issue_comment:
+  issues:
     types: [created]
 jobs:
-  commentCreated:
+  issueCreated:
     runs-on: ubuntu-latest
     steps:
       - name: Add reaction
