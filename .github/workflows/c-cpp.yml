@@ -1,16 +1,16 @@
 name: Test Action
 
 on:
-  issues:
-    types: [created, opened]
+  issue_comment:
+    types: [created]
 #  - workflow_dispatch
     
 jobs:
-  issueCreated:
+  issueCommentCreated:
     runs-on: ubuntu-latest
     steps:
       - name: Add reaction
         uses: peter-evans/create-or-update-comment@v2
         with:
-          issue-number: ${{ github.event.issue.id }}
+          issue-number: ${{ github.event.comment.id }}
           reactions: eyes
