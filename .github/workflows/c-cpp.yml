@@ -12,5 +12,5 @@ jobs:
       - name: Add reaction
         uses: peter-evans/create-or-update-comment@v2
         with:
-          issue-number: ${{ github.event.comment.id }}
+          comment-id: ${{ github.event.comment.id }}
           reactions: eyes
