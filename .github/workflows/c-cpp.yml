@@ -2,7 +2,9 @@ name: Test Action
 
 on:
   issues:
-    types: [created]
+    types: [created, opened]
+#  - workflow_dispatch
+    
 jobs:
   issueCreated:
     runs-on: ubuntu-latest
